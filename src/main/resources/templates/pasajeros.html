@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>PASAJEROSt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p th:text="'Hello, ' + ${name} + '!'" />
+
+	<table>
+		<th:block th:each="pas : ${pasajeros}">
+			<tr>
+				<td th:text="${pas.idPasajero}"></td>
+				<td th:text="${pas.IdVuelo_Pasajero}"></td>
+				<td th:text="${pas.nombre}"></td>
+				<td th:text="${pas.apellido}"></td>
+				<td th:text="${pas.nombre}"></td>
+				<td th:text="${pas.nacionalidad}"></td>
+				<td th:text="${pas.tipoIdentificacion}"></td>
+				<td th:text="${pas.numeroIdentificacion}"></td>
+			</tr>
+		</th:block>
+	</table>
+</body>
+</html>
