@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>VUELOS </title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p th:text="'Hello, ' + ${name} + '!'" />
+
+	<table>
+		<th:block th:each="v : ${vuelos}">
+			<tr>
+				<td th:text="${v.idVuelo}"></td>
+				<td th:text="${v.modeloAvion}"></td>
+				<td th:text="${v.tipoVuelo}"></td>
+				<td th:text="${v.cantidadPasajeros}"></td>
+			</tr>
+		</th:block>
+	</table>
+</body>
+</html>
